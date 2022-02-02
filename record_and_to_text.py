@@ -10,6 +10,8 @@ def record_and_to_text():  # 音声を録音し、文字を返す
         print("=== ここまでの音声を録音しました ===")
         text = r.recognize_google(audio, language="ja-JP")
         print(text)
+        return text
 
 
-record_and_to_text()
+if __name__ == "__main__":
+    record_and_to_text()
