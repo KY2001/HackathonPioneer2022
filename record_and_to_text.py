@@ -8,9 +8,12 @@ def record_and_to_text():  # 音声を録音し、文字を返す
         print("=== 何か、話しかけてください ===")
         audio = r.listen(source)
         print("=== ここまでの音声を録音しました ===")
-        text = r.recognize_google(audio, language="ja-JP")
-        print(text)
-        return text
+        text = r.recognize_google(audio, language="ja-JP", show_all=True)
+        if len(text) == 0:
+            print("良く聞き取れませんでした")
+            return ""
+        print(text["alternative"][0]["transcript"])
+        return text["alternative"][0]["transcript"]
 
 
 if __name__ == "__main__":
