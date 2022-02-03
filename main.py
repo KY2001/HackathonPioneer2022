@@ -23,3 +23,9 @@ while True:
 
     if "やましい" in text:
         executor.submit(auto_speech, "そういえば、明日は特別な日だったような気がします。お母様、グローブボックスを開けてください。", "5.mp3")
+
+    if "天気" in text or "今日" in text:
+        executor.submit(auto_speech, "今日の天気は晴れです。", "6.mp3")
+
+    if "雑学" in text or "役に立つ" in text:
+        executor.submit(auto_speech, "クマは大体左利きです。", "7.mp3")
