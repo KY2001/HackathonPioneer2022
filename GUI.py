@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 import concurrent.futures
-import record_and_to_text as r2t
+import record_and_speech_to_text as r2t
 from text_compere import *
 
 sg.theme('DarkAmber')  # デザインテーマの設定

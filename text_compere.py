@@ -1,4 +1,4 @@
-from record_and_to_text import *
+from record_and_speech_to_text import *
 from play_and_text_to_speech import *
 
 
